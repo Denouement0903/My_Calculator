@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+</head>
+<body>
+    <header>Calculator</header>
+    <main class="container d-flex align-items-center justify-content-center">
+        <!-- calculator  -->
+        <div class="bg-danger border border-dark border-4 w-75"> 
+            <h2>Calculator</h2>
+            <!-- output -->
+            <div class="bg-dark bg opacity-25">
+                <input class="w-100 text-light" type="text" placeholder="0">
+            </div>
+            
+            <!-- all buttons -->
+            <div class="buttons d-flex">
+                <!-- button numbers-->
+                <div class="bg-dark w-50 ">
+                    <div class="w-25 d-flex">
+                        <button id="btn1" onclick="addition()">1</button>
+                        <button id="btn2">2</button>
+                        <button id="btn3">3</button>
+                    </div>
+                    <div class="w-25 d-flex">
+                        <button id="btn4">4</button>
+                        <button id="btn5">5</button>
+                        <button id="btn6">6</button>
+    
+                    </div>
+                    <div class="w-25 d-flex">
+                        <button id="btn7">7</button>
+                        <button id="btn8">8</button>
+                        <button id="btn9">9</button>
+                    </div>
+                    <button id="btn0">0</button>
+                </div>
+                <!-- button operators -->
+                <div class="bg-dark bg-opacity-75">
+                    <div class="w-25">
+                        <button id="btnAdd">+</button>
+                        <button id="btnSubtract">&minus;</button>
+                        <button id="btnMultiplication">&times;</button>
+                        <button id="btnDivision">&divide;</button>
+                        <button id="btnEqual">=</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+
+    <script src="js/code.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+</body>
+</html>
