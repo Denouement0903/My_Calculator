@@ -11,52 +11,37 @@
 
 </head>
 <body>
-    <header>Calculator</header>
-    <main class="container d-flex align-items-center justify-content-center">
+    <main>
+        <header><h2 class="text-center display-4 text-light">Calculator</h2></header>
         <!-- calculator  -->
-        <div class="bg-danger border border-dark border-4 w-75"> 
-            <h2>Calculator</h2>
-            <!-- output -->
-            <div class="bg-dark bg opacity-25">
-                <input class="w-100 text-light" type="text" placeholder="0">
-            </div>
-            
-            <!-- all buttons -->
-            <div class="buttons d-flex">
-                <!-- button numbers-->
-                <div class="bg-dark w-50 ">
-                    <div class="w-25 d-flex">
-                        <button id="btn1" onclick="addition()">1</button>
-                        <button id="btn2">2</button>
-                        <button id="btn3">3</button>
-                    </div>
-                    <div class="w-25 d-flex">
-                        <button id="btn4">4</button>
-                        <button id="btn5">5</button>
-                        <button id="btn6">6</button>
-    
-                    </div>
-                    <div class="w-25 d-flex">
-                        <button id="btn7">7</button>
-                        <button id="btn8">8</button>
-                        <button id="btn9">9</button>
-                    </div>
-                    <button id="btn0">0</button>
-                </div>
-                <!-- button operators -->
-                <div class="bg-dark bg-opacity-75">
-                    <div class="w-25">
-                        <button id="btnAdd">+</button>
-                        <button id="btnSubtract">&minus;</button>
-                        <button id="btnMultiplication">&times;</button>
-                        <button id="btnDivision">&divide;</button>
-                        <button id="btnEqual">=</button>
-                    </div>
-                </div>
+        <div class="container-fluid d-flex align-items-center justify-content-center w-50">
+            <div class="calculator gap-2 w-75 bg-light rounded-3">
+                <!-- input field for output -->
+                <input class="rounded-2 display-2 bg-primary bg-opacity-10 text-primary" id="output" type="text" placeholder="0">
+                <!-- buttons -->
+                <button id="btn" class="bg-danger rounded-3" onclick="clr()">C</button>
+                <button id="btn" class="bg-info bg-opacity-20 rounded-3" onclick="del()">Del</button>
+                <button id="btn" class="bg-success bg-opacity-50" onclick="operation('%')">%</button>
+                <button id="btn" class="bg-success bg-opacity-50" onclick="operation('/')">/</button>
+                <button id="btn" onclick="operation(1)">1</button>
+                <button id="btn" onclick="operation(2)">2</button>
+                <button id="btn" onclick="operation(3)">3</button>
+                <button id="btn" class="bg-success bg-opacity-50" onclick="operation('+')">+</button>
+                <button id="btn" onclick="operation(4)">4</button>          
+                <button id="btn" onclick="operation(5)">5</button>
+                <button id="btn" onclick="operation(6)">6</button>
+                <button id="btn" class="bg-success bg-opacity-50" onclick="operation('-')">-</button>
+                <button id="btn" onclick="operation(7)">7</button>
+                <button id="btn" onclick="operation(8)">8</button>
+                <button id="btn" onclick="operation(9)">9</button>
+                <button id="btn" class="bg-success bg-opacity-50" onclick="operation('*')">*</button>
+                <button id="decimal" class="display-1 bg-success bg-opacity-50" onclick="operation('.'); ">.</button>
+                <button id="btn" onclick="operation(0)">0</button>
+                <button class="bg-primary rounded-3" id="equal" onclick="result()">=</button>
             </div>
         </div>
     </main>
-    <footer></footer>
+
 
     <script src="js/code.js"></script>
     <!-- JavaScript Bundle with Popper -->
