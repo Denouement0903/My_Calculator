@@ -65,11 +65,14 @@ button:hover {
 }
 
 
-/* @media screen and (min-width: 300px) and (max-width: 1080px){
+@media screen and (min-width: 300px) and (max-width: 1080px){
     .calculator {
         transform:scale(0.5);
         }
-} */
+    button:hover {
+        transform: (0);
+    }
+}
 
 /* @media all and (min-width: 300px) {
     .container{
