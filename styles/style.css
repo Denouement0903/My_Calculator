@@ -68,6 +68,7 @@ button:hover {
 @media screen and (min-width: 300px) and (max-width: 1080px){
     .calculator {
         transform:scale(1);
+        width: 100%;
         }
     button:hover {
         transform: (0);
