@@ -6,7 +6,15 @@ let output = document.querySelector("#outputBox");
 // actions for functions
 function operation(anyNumber) {
     // increment button value into output box
-    output.value = output.value + anyNumber; 
+    // output.value = output.value + anyNumber; 
+    if (output.value === ".") {
+        output.value = "";
+    
+    } else {
+        output.value += anyNumber;
+    
+    }
+    // ((output.value === ".") ? (output.value = "") : output.value += anyNumber)
 }
 
 
@@ -56,10 +64,4 @@ function del(){
 // } else {
     // output.value = "";
 
-// }
-
-// if (output.value == "++" || output.value == "--" || output.value == "**" ||
-// output.value == "//" || output.value == "%%" || output.value == ".." || output.value == (anyValue +"+" )) {
-    
-// } else {
 // }
