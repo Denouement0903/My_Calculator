@@ -65,7 +65,7 @@ button:hover {
 }
 
 /* phone */
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 400px) {
     .calculator {
        width: 100%;
     }
