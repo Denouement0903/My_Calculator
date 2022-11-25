@@ -71,4 +71,7 @@ button:hover {
     .calculator {
        width: 100%;
     }
+    .button:hover {
+        transform: none;
+    }
 }
