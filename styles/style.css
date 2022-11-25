@@ -28,6 +28,7 @@ h2 {
     background-color: rgb(27, 65, 63);
     border-radius: 20px;
     padding: 10px;
+    /* margin: 5px; */
 
 }
 
@@ -64,48 +65,13 @@ button:hover {
     border-radius: 20px;
 }
 
-/* phone */
 @media screen and (max-width: 400px) {
-    .container {
+    .calculator {
        width: 100%;
     }
     .button:hover {
         transform: scale(0);
         background-color: black;
     }
-}
-
-/* tablet */
-@media screen and (max-width: 768px) {
-    .calculator {
-       width: 80%;
-    }
-    .button:hover {
-        transform: scale(0);
-        background-color: black;
-    }
-}
-/* laptop */
-@media  screen and (max-width: 992px) {
-    .calculator {
-        width: 60%;
-     }
-    
-}
-
-/* desktop */
-
-@media  screen and (max-width: 1200px) {
-    .calculator {
-        width: 55%;
-     }    
-}
-
-/* larger desktop */
-@media  screen and (max-width: 1400px) {
-    .calculator {
-        width: 50%;
-     }
-    
-}
+};
 
