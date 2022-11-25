@@ -72,6 +72,7 @@ button:hover {
        width: 100%;
     }
     .button:hover {
-        transform: none;
+        transform: scale(0);
+        background-color: none;
     }
 }
