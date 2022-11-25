@@ -14,6 +14,13 @@ let output = document.querySelector("#outputBox");
 
 // actions for functions
 function operation(anyNumber) {
+    //checks if output value is not null
+    if(output.value){
+        //checks if pressed operation is a dot and a dot is already there. If so, will quit the function using return
+        if(output.value.includes('.') && anyNumber=='.'){
+            return;
+        }
+    }
     // increment button value into output box
     ((output.value === "."
     ) ? (output.value = "") : output.value += anyNumber)
