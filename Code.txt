@@ -1,0 +1,171 @@
+HTML:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+</head>
+<body>
+    <main>
+        <header><h2 class="text-center display-4 text-light">Calculator</h2></header>
+        <!-- calculator  -->
+        <div class="container-sm d-flex align-items-center justify-content-center w-50">
+            <div class="col-sm calculator gap-2 w-75 bg-light rounded-3">
+                <!-- input field for output -->
+                <input class="rounded-2 display-2 bg-primary bg-opacity-10 text-primary" id="output" type="text" placeholder="0">
+                <!-- buttons -->
+                <button id="btn" class="bg-danger rounded-3" onclick="clr()">C</button>
+                <button id="btn" class="bg-info bg-opacity-20 rounded-3" onclick="del()">Del</button>
+                <button id="btn" class="bg-success bg-opacity-50" onclick="operation('%')">%</button>
+                <button id="btn" class="bg-success bg-opacity-50" onclick="operation('/')">/</button>
+                <button id="btn" onclick="operation(1)">1</button>
+                <button id="btn" onclick="operation(2)">2</button>
+                <button id="btn" onclick="operation(3)">3</button>
+                <button id="btn" class="bg-success bg-opacity-50" onclick="operation('+')">+</button>
+                <button id="btn" onclick="operation(4)">4</button>          
+                <button id="btn" onclick="operation(5)">5</button>
+                <button id="btn" onclick="operation(6)">6</button>
+                <button id="btn" class="bg-success bg-opacity-50" onclick="operation('-')">-</button>
+                <button id="btn" onclick="operation(7)">7</button>
+                <button id="btn" onclick="operation(8)">8</button>
+                <button id="btn" onclick="operation(9)">9</button>
+                <button id="btn" class="bg-success bg-opacity-50" onclick="operation('*')">*</button>
+                <button id="decimal" class="display-1 bg-success bg-opacity-50" onclick="operation('.'); ">.</button>
+                <button id="btn" onclick="operation(0)">0</button>
+                <button class="bg-primary rounded-3" id="equal" onclick="result()">=</button>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="js/code.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+
+CSS:
+
+
+*, 
+*::after, 
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: black;
+    overflow: hidden;
+}
+main {
+    background-color: black;
+}
+
+.container {
+    margin: auto;
+    margin-top: 8rem;
+    background-color: rgb(8, 13, 11);
+    
+}
+
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2;
+    height: 40rem;
+    padding: 10px;
+    
+}
+
+input {
+    grid-column: span 4;
+    text-align: end;
+    box-shadow: rgb(153, 173, 190) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    border: none;
+    
+}
+
+button {
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.034), -2px -2px 10px rgb(255, 255, 255),
+    inset 2px 2px 3px rgb(54, 136, 136), inset -3px -5px 5px rgb(255, 255, 255);
+    border: none;
+    transition: transform 200ms ease-in-out;
+    font-size: 18rem;
+}
+
+#btn {
+    font-size: 30px;
+}
+
+button:hover {
+    transform: scale(1.3);
+    background-color: rgb(206, 228, 228);
+}
+
+#equal {
+    grid-column: span 2 ;
+    font-size: 60px;
+}
+
+
+@media screen and (min-width: 300px) and (min-width: 1080px){
+    .calculator {
+        transform:scale(1);
+        width: 500px;
+        }
+    button:hover {
+        transform: (0);
+    }
+}
+
+/* @media all and (min-width: 300px) {
+    .container{
+      width: 200px;
+    }
+  } */
+
+
+Javascript: 
+
+let output = document.querySelector("#output");
+// output operation for buttons
+function operation(anyValue) {
+    // increment button values to output field
+    output.value = output.value + anyValue;
+}
+// equal
+function result() {
+    try {
+        output.value = eval(output.value);
+    }
+    catch(error) {
+        alert("Does not compute!")
+    }
+}
+// slice is an array method
+function del() {
+    output.value = output.value.slice(0,-1);
+}
+// to clear
+function clr() {
+    output.value = "";
+}
+
+
+
+
