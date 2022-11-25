@@ -13,8 +13,8 @@
 <body>
     <main>
         <h2>Calculator</h2>
-        <div class="container-fluid-sm w-50 d-flex justify-content-center align-content-center">
-            <div class="calculator gap-2 rounded-4">
+        <div class="container-fluid vh-100 w-100 d-flex justify-content-center align-content-center">
+            <div class="calculator w-50 gap-2 rounded-4 my-sm-5">
                 <!-- output -->
                 <input type="text" id="outputBox" placeholder="0">
                 <!-- buttons -->
@@ -22,18 +22,18 @@
                 <button class="rounded-2" onclick="del()">Del</button>
                 <button class="rounded-2" onclick="operation('%')">%</button>
                 <button class="rounded-2" onclick="operation('/')">&divide;</button>
-                <button class="rounded-2" onclick="operation(1)">1</button>
-                <button class="rounded-2" onclick="operation(2)">2</button>
-                <button class="rounded-2" onclick="operation(3)">3</button>
+                <button class="rounded-2" onclick="operation(7)">7</button>
+                <button class="rounded-2" onclick="operation(8)">8</button>
+                <button class="rounded-2" onclick="operation(9)">9</button>
                 <button class="rounded-2" onclick="operation('*')">&times;</button>
                 <button class="rounded-2" onclick="operation(4)">4</button>
                 <button class="rounded-2" onclick="operation(5)">5</button>
                 <button class="rounded-2" onclick="operation(6)">6</button>
-                <button class="rounded-2" onclick="operation('+')">+</button>
-                <button class="rounded-2" onclick="operation(7)">7</button>
-                <button class="rounded-2" onclick="operation(8)">8</button>
-                <button class="rounded-2" onclick="operation(9)">9</button>
                 <button class="rounded-2" onclick="operation('-')">&minus;</button>
+                <button class="rounded-2" onclick="operation(1)">1</button>
+                <button class="rounded-2" onclick="operation(2)">2</button>
+                <button class="rounded-2" onclick="operation(3)">3</button>
+                <button class="rounded-2" onclick="operation('+')">+</button>
                 <button class="rounded-2" onclick="operation('.')">.</button>
                 <button class="rounded-2" onclick="operation(0)">0</button>
                 <button onclick="finalResult()" class="equalBtn">&equals;</button>
