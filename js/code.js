@@ -10,7 +10,6 @@ function operation(anyValue) {
             if (!array.includes('.') ) {
                 output.value += anyValue;
                 array.push(anyValue);
-                console.log(array);
             }
             break;
         case "+":
@@ -23,11 +22,9 @@ function operation(anyValue) {
                 array = [];
                 break;
             } 
-            // (!output.value.endsWith(anyValue) ? (output.value += anyValue, array = []) : output.value = output.value)
         default:
             array.push(anyValue);
             output.value += anyValue;
-            console.log(array)
 
     }
 }
@@ -55,55 +52,3 @@ function del(){
     output.value=output.value.slice(0,-1);
     array.pop()
 }
-
-//checks if output value is not null
-// if(output.value){
-    //checks if pressed operation is a dot and if a dot is already there. If so, will quit the function using return
-//     if(output.value.includes('.') && anyValue=='.'){
-//         if(output.value.includes('+')){
-//             output.value += anyValue; 
-//         };
-//         return;
-//     }
-// }
-// output.value += anyValue;
-
-
-// output.value += anyValue;
-// increment button value into output box
-// ((output.value === "."
-// ) ? (output.value = "") : output.value += anyValue)
-// if (output.value === ".") {
-    //     output.value = "";
-    
-// } else {
-//     output.value += anyNumber;
-
-// }
-
-
-
-
-// for operators
-
-// let array = [];
-
-// function operator(anyValue) {
-//     if (output.value == ".") {
-    //         output.value = "";
-    //         output.value = output.value + anyValue; 
-    
-//     } else {
-//         output.value=eval(output.value)
-//     }
-// }
-
-
-// let array = [];
-// output.value = output.value + anyNumber;
-// array.push(output.value)
-// if (array.includes(".")) {
-//     output.value = "";
-//     } else {
-//     output.value=eval(output.value)
-// }
